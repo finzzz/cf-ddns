@@ -1,4 +1,4 @@
-# cf-dynamic-ip
+# Cloudflare Dynamic IP
 
 ## Setup
 1. install jq
