@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+    cf_dynamic_ip:
+        image: finzzz/cf_dynamic_ip
+        container_name: cf_dynamic_ip
+        restart: always
+        environment:
+            - "options=-all"
+            - "cron=*/32 * * * *"
+        volumes:
+            - /secret.key:/cf_dynamic_ip/secret.key:ro 
+            - /domain.lst:/cf_dynamic_ip/domain.lst:ro
